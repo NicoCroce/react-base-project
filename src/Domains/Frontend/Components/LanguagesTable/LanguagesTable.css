@@ -1,0 +1,35 @@
+.languages-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+@media (width <= 600px) {
+  .languages-table {
+    gap: 16px;
+
+    .languages-table-header {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .languages-table {
+    grid-template-columns: auto;
+
+    .languages-table-header {
+      background-color: white;
+      display: grid;
+      grid-template:
+        1fr / minmax(120px, 140px) minmax(100px, 1fr)
+        repeat(2, minmax(50px, 1fr))
+        minmax(80px, 1fr);
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      color: var(--main);
+      font-weight: 800;
+      border-bottom: 1px solid var(--main);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.header {
+  background-color: var(--contrast);
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  padding: 24px;
+  span {
+    color: var(--main);
+  }
+}

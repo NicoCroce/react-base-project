@@ -1,0 +1,16 @@
+.layout-page {
+  display: grid;
+  gap: 16px;
+
+  grid-template:
+    'main-content aside-content' auto /
+    2fr 1fr;
+
+  .main-content {
+    grid-area: main-content;
+  }
+
+  .aside-content {
+    grid-area: aside-content;
+  }
+}

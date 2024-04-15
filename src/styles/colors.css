@@ -1,0 +1,46 @@
+:root {
+  --blue-50: #e3f2fd;
+  --blue-100: #bbdefb;
+  --blue-200: #90caf9;
+  --blue-300: #64b5f6;
+  --blue-400: #42a5f5;
+  --blue-500: #2196f3;
+  --blue-600: #1e88e5;
+  --blue-700: #1976d2;
+  --blue-800: #1565c0;
+  --blue-900: #0d47a1;
+  --blue-A100: #82b1ff;
+  --blue-A200: #448aff;
+  --blue-A400: #2979ff;
+  --blue-A700: #2962ff;
+
+  --orange-50: #fbe9e7;
+  --orange-100: #ffccbc;
+  --orange-200: #ffab91;
+  --orange-300: #ff8a65;
+  --orange-400: #ff7043;
+  --orange-500: #ff5722;
+  --orange-600: #f4511e;
+  --orange-700: #e64a19;
+  --orange-800: #d84315;
+  --orange-900: #bf360c;
+  --orange-A100: #ff9e80;
+  --orange-A200: #ff6e40;
+  --orange-A400: #ff3d00;
+  --orange-A700: #dd2c00;
+
+  --grey-50: #eceff1;
+  --grey-100: #cfd8dc;
+  --grey-200: #b0bec5;
+  --grey-300: #90a4ae;
+  --grey-400: #78909c;
+  --grey-500: #607d8b;
+  --grey-600: #546e7a;
+  --grey-700: #455a64;
+  --grey-800: #37474f;
+  --grey-900: #263238;
+
+  --main: var(--blue-900);
+  --secondary: var(--grey-900);
+  --constrast: var(--grey-50);
+}
