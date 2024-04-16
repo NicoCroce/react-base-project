@@ -9,12 +9,13 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'plugin:react/jsx-runtime',
-    'prettier'
+    'prettier',
+    'plugin:@tanstack/eslint-plugin-query/recommended'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh', 'react'],
+  plugins: ['react-refresh', 'react', '@tanstack/query'],
   rules: {
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [

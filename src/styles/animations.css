@@ -1,0 +1,20 @@
+.skeleton {
+  width: 100%; /* Ajusta el ancho del skeleton según tus necesidades */
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  ); /* Degradado de fondo */
+  background-size: 200% 100%; /* Tamaño del degradado */
+  animation: skeleton-loading 1.5s ease-in-out infinite; /* Animación de carga */
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0; /* Inicia el degradado completamente a la izquierda */
+  }
+  100% {
+    background-position: -200% 0; /* Mueve el degradado completamente a la derecha */
+  }
+}

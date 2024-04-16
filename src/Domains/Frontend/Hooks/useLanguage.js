@@ -1,20 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { API } from '../../../Services/API';
 import { API_LANG_FRONT } from '../Services/ApiRoutes';
 
-export const useLanguage = () => {
-  const [languages, setList] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await API(API_LANG_FRONT);
-        setList(res);
-      } catch (error) {
-        console.error('Eror: Get language list');
-      }
-    })();
-  }, []);
-
-  return { languages };
-};
+export const useLanguage = () =>
+  useQuery({
+    queryKey: ['frontLanguages'],
+    queryFn: async () => API(API_LANG_FRONT),
+    staleTime: 5 * 1000, // 5 minutos en milisegundos
+    refetchInterval: false // Desactiva la actualización automática
+  });
