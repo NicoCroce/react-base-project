@@ -1,0 +1,1 @@
+export { LanguagesBackTable } from './LanguagesBackTable';

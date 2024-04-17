@@ -1,5 +1,5 @@
-import { Page } from '../../../Components/Page/Page';
-import { LangueagesFrontTable } from '../Components/LangueagesFrontTable/LangueagesFrontTable';
+import { Page } from '@/Components';
+import { LangueagesFrontTable } from '../Components';
 
 export const FrontendPage = () => {
   return (

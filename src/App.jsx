@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Main } from './Components/Main/Main';
-import { Navbar } from './Components/Navbar/Navbar';
+import { Main, Navbar } from './Components';
 import './App.css';
 
 const App = () => {

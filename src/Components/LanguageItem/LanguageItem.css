@@ -1,30 +1,24 @@
 .language-item {
   padding: 16px;
   background-color: white;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
 
-  .language-item-detail-container {
-    display: grid;
-    grid-template:
-      minmax(100px, auto) repeat(min-content, auto) /
-      minmax(60px, 200px);
+  .language-name {
+    display: flex;
     align-items: center;
-    width: 100%;
     gap: 16px;
-
-    .language-name {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      img {
-        aspect-ratio: 1 / 1;
-        object-fit: contain;
-        height: 40px;
-      }
+    img {
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      height: 40px;
     }
+  }
 
-    a {
-      cursor: pointer;
-    }
+  a {
+    cursor: pointer;
   }
 }
 
@@ -49,13 +43,9 @@
 
 @media (min-width: 600px) {
   .language-item {
-    border-bottom: 1px solid var(--grey-100);
-
-    .language-item-detail-container {
-      grid-template:
-        1fr / minmax(120px, 140px) minmax(100px, 1fr)
-        repeat(2, minmax(50px, 1fr))
-        minmax(80px, 1fr);
-    }
+    grid-template:
+      1fr / minmax(120px, 140px) minmax(100px, 1fr)
+      repeat(2, minmax(50px, 1fr))
+      minmax(80px, 1fr);
   }
 }

@@ -32,6 +32,8 @@ module.exports = {
     ],
     'react/jsx-pascal-case': 2,
     'react/prop-types': 0,
-    'arrow-body-style': 0
+    'arrow-body-style': 0,
+    'import/no-unresolved': 0,
+    'import/extensions': 0
   }
 };

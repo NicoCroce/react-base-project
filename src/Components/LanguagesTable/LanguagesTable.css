@@ -31,6 +31,10 @@
       font-weight: 800;
       border-bottom: 1px solid var(--main);
     }
+
+    > li {
+      border-bottom: 1px solid var(--grey-100);
+    }
   }
 
   .languages-table-skeleton {

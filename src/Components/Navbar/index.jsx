@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { FRONTEND_ROUTE } from '../../Domains/Frontend/Routes';
+import { FRONTEND_ROUTE } from '@/Domains/Frontend/Routes';
+import { BACKEND_ROUTE } from '@/Domains/Backend/Routes';
 import './Navbar.css';
-import { BACKEND_ROUTE } from '../../Domains/Backend/Routes';
 
 export const Navbar = () => {
   return (

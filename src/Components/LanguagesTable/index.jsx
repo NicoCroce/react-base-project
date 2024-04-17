@@ -1,5 +1,6 @@
-import { LanguageItem } from '../LanguageItem';
+import { LanguageItem } from '@/Components/LanguageItem';
 import './LanguagesTable.css';
+import { LanguageTableSkeleton } from './LanguageTableSkeleton';
 
 export const LanguagesTable = ({ languages }) => {
   return (
@@ -37,3 +38,5 @@ export const LanguagesTable = ({ languages }) => {
     </ul>
   );
 };
+
+LanguagesTable.Skeleton = LanguageTableSkeleton;
