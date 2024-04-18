@@ -527,6 +527,13 @@
   dependencies:
     "@typescript-eslint/utils" "^6.20.0"
 
+"@tanstack/query-async-storage-persister@^5.29.1":
+  version "5.29.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-async-storage-persister/-/query-async-storage-persister-5.29.1.tgz#945ff003f647cc1f1a97c774117e8a44e7ccab65"
+  integrity sha512-UREmZw8tJ4GLSq04MHChWTxilDV3WRUWzVFM8Q3qYt6snyBmdRwehzjvjqvRdQicrd4YWDkGB1D8qrGRlFL0Jw==
+  dependencies:
+    "@tanstack/query-persist-client-core" "5.29.0"
+
 "@tanstack/query-core@5.29.0":
   version "5.29.0"
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.29.0.tgz#d0b3d12c07d5a47f42ab0c1ed4f317106f3d4b20"
@@ -1917,6 +1924,11 @@ iconv-lite@0.4.24:
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
+
+idb-keyval@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/idb-keyval/-/idb-keyval-6.2.1.tgz#94516d625346d16f56f3b33855da11bfded2db33"
+  integrity sha512-8Sb3veuYCyrZL+VBt9LJfZjLUPWVvqn8tG28VqYNFCo43KHcKuq+b4EiXGeuaLAQWL2YmyDgMp2aSpH9JHsEQg==
 
 ignore@^5.2.0:
   version "5.3.1"
