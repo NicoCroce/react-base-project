@@ -3,27 +3,27 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-// import { persistQueryClient } from 'react-query/persistQueryClient-experimental';
+import { persistQueryClient } from '@tanstack/react-query-persist-client';
+import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persister';
+import { compress, decompress } from 'lz-string';
+
 import { router } from './Routes/index';
 
 import './index.css';
 
 const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      cacheTime: 1000 * 60 * 60 * 24 // 24 hours
-    }
-  }
-});
-/*
-const localStoragePersistor = createWebStoragePersistor({
-  storage: window.localStorage
+  defaultOptions: { queries: { staleTime: Infinity } }
 });
 
 persistQueryClient({
   queryClient,
-  persistor: localStoragePersistor
-}); */
+  persister: createSyncStoragePersister({
+    storage: window.localStorage,
+    serialize: (data) => compress(JSON.stringify(data)),
+    deserialize: (data) => JSON.parse(decompress(data))
+  }),
+  maxAge: Infinity
+});
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -537,12 +537,34 @@
   resolved "https://registry.yarnpkg.com/@tanstack/query-devtools/-/query-devtools-5.28.10.tgz#33e9a42dd2199fca12f0dd2d891570ecdbfd3c7b"
   integrity sha512-5UN629fKa5/1K/2Pd26gaU7epxRrYiT1gy+V+pW5K6hnf1DeUKK3pANSb2eHKlecjIKIhTwyF7k9XdyE2gREvQ==
 
+"@tanstack/query-persist-client-core@5.29.0":
+  version "5.29.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-persist-client-core/-/query-persist-client-core-5.29.0.tgz#772e60a04f995715f333aa608a7d38cdbf16712b"
+  integrity sha512-aQpXqHQIg/GFtsQKUx/g3cMS/P9CFTWITXPlhrICW14E16gmQ+GMwnoXHAnu/kBV4MucfwUFKhVl4rzryltORQ==
+  dependencies:
+    "@tanstack/query-core" "5.29.0"
+
+"@tanstack/query-sync-storage-persister@^5.29.0":
+  version "5.29.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-sync-storage-persister/-/query-sync-storage-persister-5.29.0.tgz#ac9e76fa69ef2ae2f4e2692d3fbd995809da0cc3"
+  integrity sha512-22l1Sg8BY1nu0E97XZ/vnNwIUR6393g3j053AbC37bGdmVBmXxiVYlZsgXCPakgwk6ryCOKnIgLshumow/5jTw==
+  dependencies:
+    "@tanstack/query-core" "5.29.0"
+    "@tanstack/query-persist-client-core" "5.29.0"
+
 "@tanstack/react-query-devtools@^5.29.2":
   version "5.29.2"
   resolved "https://registry.yarnpkg.com/@tanstack/react-query-devtools/-/react-query-devtools-5.29.2.tgz#ff9e6a113a4828d4b62f4861e0fb2c05b79b37dc"
   integrity sha512-EmsaLNa8iFtReAW+5ftom0/TW78fIosVor517ak/+JFaoTBw8Yub3ao937JFE6AM3K/HXhteqvObetgt1ndLcw==
   dependencies:
     "@tanstack/query-devtools" "5.28.10"
+
+"@tanstack/react-query-persist-client@^5.29.2":
+  version "5.29.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query-persist-client/-/react-query-persist-client-5.29.2.tgz#cdf94dae7502cf433e84eb3b25e2ef104cbdb5ec"
+  integrity sha512-I8KnQ1CzEfJAU/+8AQHCCCld2iWmmvxmQUTaoqPQyeLZDWvlUSJ/NpEpfMWtf4qyh5m0KJm8VmhcqdOnJSwaEQ==
+  dependencies:
+    "@tanstack/query-persist-client-core" "5.29.0"
 
 "@tanstack/react-query@^5.29.2":
   version "5.29.2"
@@ -2245,6 +2267,11 @@ lru-cache@^6.0.0:
   integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
   dependencies:
     yallist "^4.0.0"
+
+lz-string@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.5.0.tgz#c1ab50f77887b712621201ba9fd4e3a6ed099941"
+  integrity sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==
 
 media-typer@0.3.0:
   version "0.3.0"
