@@ -14,7 +14,7 @@ export const LanguageItem = ({
   officialWeb,
   img
 }) => {
-  const { setQueryData, data } = useGlobalStore('selected', []);
+  const { setQueryData, data } = useGlobalStore('selected');
 
   const handleClick = () => {
     setQueryData([...(data || []), name]);

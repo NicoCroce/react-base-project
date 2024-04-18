@@ -6,7 +6,7 @@ import { useGlobalStore } from '@/Hooks/useGlobalStore';
 import './Navbar.css';
 
 export const Navbar = () => {
-  const { data } = useGlobalStore('selected', []);
+  const { data } = useGlobalStore('selected');
 
   return (
     <nav className="navbar">

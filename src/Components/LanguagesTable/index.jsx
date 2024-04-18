@@ -12,29 +12,30 @@ export const LanguagesTable = ({ languages }) => {
         <span>Popularity</span>
         <span>Complexity</span>
       </div>
-      {languages.map(
-        ({
-          name,
-          complexity,
-          creationDate,
-          creator,
-          popularity,
-          officialWeb,
-          img
-        }) => (
-          <li key={`${name}-${creationDate}`}>
-            <LanguageItem
-              name={name}
-              creator={creator}
-              creationDate={creationDate}
-              complexity={complexity}
-              popularity={popularity}
-              officialWeb={officialWeb}
-              img={img}
-            />
-          </li>
-        )
-      )}
+      {languages &&
+        languages.map(
+          ({
+            name,
+            complexity,
+            creationDate,
+            creator,
+            popularity,
+            officialWeb,
+            img
+          }) => (
+            <li key={`${name}-${creationDate}`}>
+              <LanguageItem
+                name={name}
+                creator={creator}
+                creationDate={creationDate}
+                complexity={complexity}
+                popularity={popularity}
+                officialWeb={officialWeb}
+                img={img}
+              />
+            </li>
+          )
+        )}
     </ul>
   );
 };
