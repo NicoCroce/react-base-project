@@ -21,9 +21,9 @@
       background-color: white;
       display: grid;
       grid-template:
-        1fr / minmax(120px, 140px) minmax(100px, 1fr)
+        1fr / minmax(160px, 180px) minmax(100px, 1fr)
         repeat(2, minmax(50px, 1fr))
-        minmax(80px, 1fr);
+        minmax(80px, 1fr) 40px;
       align-items: center;
       gap: 16px;
       padding: 16px;

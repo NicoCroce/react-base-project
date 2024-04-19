@@ -1,8 +1,14 @@
 import { LanguageItem } from '@/Components/LanguageItem';
 import './LanguagesTable.css';
 import { LanguageTableSkeleton } from './LanguageTableSkeleton';
+import { useGlobalStore } from '@/Hooks/useGlobalStore';
 
 export const LanguagesTable = ({ languages }) => {
+  const { setQueryData } = useGlobalStore('selected');
+
+  const handleClick = (name) => () => {
+    setQueryData((prevState) => [...(prevState || []), name]);
+  };
   return (
     <ul className="languages-table">
       <div className="languages-table-header">
@@ -11,6 +17,7 @@ export const LanguagesTable = ({ languages }) => {
         <span>Date</span>
         <span>Popularity</span>
         <span>Complexity</span>
+        <span>Favorite</span>
       </div>
       {languages &&
         languages.map(
@@ -32,6 +39,7 @@ export const LanguagesTable = ({ languages }) => {
                 popularity={popularity}
                 officialWeb={officialWeb}
                 img={img}
+                handleClick={handleClick}
               />
             </li>
           )
