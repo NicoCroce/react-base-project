@@ -3,10 +3,12 @@ import { NavLink } from 'react-router-dom';
 import { FRONTEND_ROUTE } from '@/Domains/Frontend/Routes';
 import { BACKEND_ROUTE } from '@/Domains/Backend/Routes';
 import { useGlobalStore } from '@/Hooks/useGlobalStore';
+import { FAVORITES_ROUTE } from '@/Domains/Favorites/Routes';
+
 import './Navbar.css';
 
 export const Navbar = () => {
-  const { data } = useGlobalStore('selected');
+  const { data } = useGlobalStore('favorites');
 
   return (
     <nav className="navbar">
@@ -18,20 +20,12 @@ export const Navbar = () => {
         <li>
           <NavLink to={BACKEND_ROUTE}>Backend</NavLink>
         </li>
-      </ul>
-      <ul
-        style={{
-          color: 'white',
-          marginTop: '30px',
-          display: 'flex',
-          flexFlow: 'nowrap column',
-          gap: '16px'
-        }}
-      >
-        {data &&
-          data.map((lang, index) => {
-            return <li key={index}>{lang}</li>;
-          })}
+        <li>
+          <NavLink to={FAVORITES_ROUTE} className="has-chip">
+            <span>Favorites</span>
+            {data?.length && <span className="chip">{data.length}</span>}
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

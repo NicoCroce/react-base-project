@@ -527,13 +527,6 @@
   dependencies:
     "@typescript-eslint/utils" "^6.20.0"
 
-"@tanstack/query-async-storage-persister@^5.29.1":
-  version "5.29.1"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-async-storage-persister/-/query-async-storage-persister-5.29.1.tgz#945ff003f647cc1f1a97c774117e8a44e7ccab65"
-  integrity sha512-UREmZw8tJ4GLSq04MHChWTxilDV3WRUWzVFM8Q3qYt6snyBmdRwehzjvjqvRdQicrd4YWDkGB1D8qrGRlFL0Jw==
-  dependencies:
-    "@tanstack/query-persist-client-core" "5.29.0"
-
 "@tanstack/query-core@5.29.0":
   version "5.29.0"
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.29.0.tgz#d0b3d12c07d5a47f42ab0c1ed4f317106f3d4b20"
@@ -550,14 +543,6 @@
   integrity sha512-aQpXqHQIg/GFtsQKUx/g3cMS/P9CFTWITXPlhrICW14E16gmQ+GMwnoXHAnu/kBV4MucfwUFKhVl4rzryltORQ==
   dependencies:
     "@tanstack/query-core" "5.29.0"
-
-"@tanstack/query-sync-storage-persister@^5.29.0":
-  version "5.29.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-sync-storage-persister/-/query-sync-storage-persister-5.29.0.tgz#ac9e76fa69ef2ae2f4e2692d3fbd995809da0cc3"
-  integrity sha512-22l1Sg8BY1nu0E97XZ/vnNwIUR6393g3j053AbC37bGdmVBmXxiVYlZsgXCPakgwk6ryCOKnIgLshumow/5jTw==
-  dependencies:
-    "@tanstack/query-core" "5.29.0"
-    "@tanstack/query-persist-client-core" "5.29.0"
 
 "@tanstack/react-query-devtools@^5.29.2":
   version "5.29.2"
@@ -914,9 +899,9 @@ balanced-match@^1.0.0:
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-body-parser@1.20.2:
+body-parser@1.20.2, body-parser@^1.20.2:
   version "1.20.2"
-  resolved "https://registry.npmjs.org/body-parser/-/body-parser-1.20.2.tgz"
+  resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.2.tgz#6feb0e21c4724d06de7ff38da36dad4f57a747fd"
   integrity sha512-ml9pReCu3M61kGlqoTm2umSXTlRTuGTx0bfYj+uIUKKYycG5NtSbeetV3faSU6R7ajOPw0g/J1PvK4qNy7s5bA==
   dependencies:
     bytes "3.1.2"
@@ -3112,6 +3097,11 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
   integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
+
+uuid@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.1.tgz#e188d4c8853cc722220392c424cd637f32293f30"
+  integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"

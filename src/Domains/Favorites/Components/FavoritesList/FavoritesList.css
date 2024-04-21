@@ -1,0 +1,18 @@
+.favorites-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: 16px;
+
+  li {
+    padding: 16px;
+    border: 1px solid;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+
+    .trash {
+      cursor: pointer;
+      padding: 0 2px;
+    }
+  }
+}
