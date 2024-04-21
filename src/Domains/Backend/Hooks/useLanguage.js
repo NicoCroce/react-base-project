@@ -5,6 +5,6 @@ import { API_LANG_BACK } from '../Services/ApiRoutes';
 export const useLanguage = () =>
   useQuery({
     queryKey: ['backLanguages'],
-    queryFn: () => API(API_LANG_BACK)
+    queryFn: () => API.GET(API_LANG_BACK)
     // En este caso el back se ejecuta todo el tiempo.
   });
