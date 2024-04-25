@@ -13,8 +13,7 @@ export const Navbar = () => {
   const { data: mutationsWaiting } = useGlobalStore('mutationWaiting');
 
   const handleSync = () => {
-    // if (!mutationsWaiting) return;
-    syncMutationsWithServer();
+    syncMutationsWithServer(['favorites']);
   };
 
   const mutationsWaitingCount = mutationsWaiting?.length || 0;
