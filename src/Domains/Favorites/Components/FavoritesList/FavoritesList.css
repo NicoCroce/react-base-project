@@ -10,6 +10,10 @@
     display: flex;
     justify-content: space-between;
 
+    &.async {
+      background-color: var(--grey-100);
+    }
+
     .trash {
       cursor: pointer;
       padding: 0 2px;

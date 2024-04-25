@@ -10,15 +10,14 @@ import { fileFavs } from './config.js';
 const app = express();
 const port = 3000;
 
-let favs = null;
-
-try {
-  const data = fs.readFileSync(fileFavs, 'utf8');
-  console.log(data);
-  favs = JSON.parse(data);
-} catch (err) {
-  console.error(err);
-}
+const readFavs = () => {
+  try {
+    const data = fs.readFileSync(fileFavs, 'utf8');
+    return JSON.parse(data);
+  } catch (err) {
+    return err;
+  }
+};
 
 const corsOptions = {
   origin: '*'
@@ -32,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use((req, res, next) => {
   setTimeout(() => {
     next();
-  }, 2000);
+  }, 1000);
 });
 
 app.get('/language/:type', (req, res) => {
@@ -44,12 +43,16 @@ app.get('/language/:type', (req, res) => {
 app
   .route('/favorites')
   .get((req, res) => {
-    res.status(200).send(favs);
+    res.status(200).send(readFavs());
   })
+  // eslint-disable-next-line consistent-return
   .put((req, res) => {
-    const updateFavs = JSON.stringify([...favs, ...req.body]);
-    fs.writeFileSync(fileFavs, updateFavs);
+    if (req.body[0] === 'CSS') {
+      return res.status(500).send(JSON.stringify('error'));
+    }
 
+    const updateFavs = JSON.stringify([...readFavs(), ...req.body]);
+    fs.writeFileSync(fileFavs, updateFavs);
     res.status(200).send(updateFavs);
   });
 

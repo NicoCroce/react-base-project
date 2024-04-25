@@ -1,14 +1,16 @@
 import { LanguageItem } from '@/Components/LanguageItem';
-import './LanguagesTable.css';
 import { LanguageTableSkeleton } from './LanguageTableSkeleton';
-import { useGlobalStore } from '@/Hooks/useGlobalStore';
+import { useFavorites } from '@/Domains/Favorites/Hooks/useFavorites';
+
+import './LanguagesTable.css';
 
 export const LanguagesTable = ({ languages }) => {
-  const { setQueryData } = useGlobalStore('selected');
+  const { mutation } = useFavorites();
 
-  const handleClick = (name) => () => {
-    setQueryData((prevState) => [...(prevState || []), name]);
+  const handleClick = (name) => async () => {
+    await mutation.mutateAsync(name);
   };
+
   return (
     <ul className="languages-table">
       <div className="languages-table-header">
