@@ -39,6 +39,10 @@ const persistStoreRejected = async (store) => {
 export const syncMutationsWithServer = async (invalidateQueries) => {
   const allMutations = await get('mutations');
 
+  // Invalidate query, for update react-query state.
+  if (!allMutations)
+    return queryClient.invalidateQueries({ queryKey: invalidateQueries });
+
   /**
    * Generate an array with all fetches to will be executed
    */
@@ -66,5 +70,5 @@ export const syncMutationsWithServer = async (invalidateQueries) => {
   persistStoreRejected(store);
 
   // Invalidate query, for update react-query state.
-  queryClient.invalidateQueries({ queryKey: invalidateQueries });
+  return queryClient.invalidateQueries({ queryKey: invalidateQueries });
 };

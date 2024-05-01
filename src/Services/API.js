@@ -1,6 +1,7 @@
 import { persistMutation } from '@/Utils/Persist';
 
-const host = 'http://127.0.0.1:3000';
+// const host = 'https://sought-swift-magical.ngrok-free.app';
+const host = 'http://localhost:3000';
 
 /** Fetch personalizado con manejo de errores y persistencia */
 

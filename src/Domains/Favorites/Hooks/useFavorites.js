@@ -9,14 +9,26 @@ export const useFavorites = () => {
 
   const getFavorites = useQuery({
     queryKey: [QUERY_KEY],
-    queryFn: () => API.GET(API_LANG_FAVS),
-    gcTime: Infinity
+    queryFn: async () => {
+      // save the data before return the response.
+      const data = queryClient.getQueryData([QUERY_KEY]);
+      try {
+        // run fetch
+        const res = await API.GET(API_LANG_FAVS);
+        return res;
+      } catch (error) {
+        // if fetch return error, resotore saved data.
+        return data;
+      }
+    },
+    gcTime: Infinity,
+    staleTime: 1000
   });
 
   const mutation = useMutation({
-    // ejecuto la mutación, en este caso un PUT
+    // run the mutation, in this example is a method "PUT"
     mutationFn: (newFav) =>
-      API.PUT('favorites', {
+      API.PUT(API_LANG_FAVS, {
         body: [newFav]
       }),
     onMutate: async (newFav) => {
